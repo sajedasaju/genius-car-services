@@ -3,7 +3,7 @@ import { useAuthState, useSendEmailVerification } from 'react-firebase-hooks/aut
 import { Navigate, useLocation } from 'react-router-dom';
 import Loading from '../../Shared/Loading/Loading';
 import auth from './../../../firebase.init';
-import { ToastContainer, toast } from 'react-toastify'; import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify'; import 'react-toastify/dist/ReactToastify.css';
 
 const RequireAuth = ({ children }) => {
     let location = useLocation();
@@ -30,7 +30,7 @@ const RequireAuth = ({ children }) => {
             >
                 Send varification email
             </button>
-            <ToastContainer></ToastContainer>
+
         </div>;
     }
     return children;
